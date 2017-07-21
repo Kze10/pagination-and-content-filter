@@ -111,8 +111,8 @@ function searchList() {
         // access the student’s name and email.
         name = li.getElementsByTagName('h3')[0].textContent;
         email = li.getElementsByClassName('email')[0].textContent;
-        // if the search value is equal to either email or name
-        if (searchValue.toLowerCase() === name || searchValue.toLowerCase() === email) {  
+        // if the search value is includes either email or name characters
+        if (name.toLowerCase().includes(searchValue.toLowerCase()) || email.toLowerCase().includes(searchValue.toLowerCase())) {  
             match.push(li);
         }
     }
