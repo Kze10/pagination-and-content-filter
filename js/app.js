@@ -1,3 +1,7 @@
+/*   ======================================================================
+               === Created by Carlos Braga === www.kze.com.au ===
+*/// ======================================================================
+
 'use strict';
 
 const page = document.querySelector('.page');
@@ -10,7 +14,7 @@ studentItems = document.querySelectorAll('.student-item');
 showPage(1, studentItems);
 appendPageLinks(studentItems);
 searchMarkUp();
-
+// =====================================================================
 // to create the mark up for the search function
 function searchMarkUp() {
     const div = document.createElement('div');
@@ -27,7 +31,7 @@ function searchMarkUp() {
     div.appendChild(input);
     div.appendChild(button);
 }
-
+// =====================================================================
 function showPage(currentPage, currentList) {
     // hide all students on the page
     hideAllStudents();
@@ -42,7 +46,7 @@ function showPage(currentPage, currentList) {
         }
     }
 }
-
+// =====================================================================
 function appendPageLinks(currentList) {
     // the ammount of pages the list will need
     pageNumbers = Math.ceil(currentList.length / studentsPerPage);
@@ -79,7 +83,7 @@ function appendPageLinks(currentList) {
         ulPage.appendChild(pageList);
     }
 }
-
+// =====================================================================
 // Search Event Listenter
 document.getElementById('buttonSearch').addEventListener('click', searchList, false);
 
@@ -129,7 +133,7 @@ function searchList() {
     // clear input field
     $('#input').val('');
 }
-
+// =====================================================================
 // function to display the message of no results.
 function displayNotFound(message) {
     divMessage = document.createElement('div');
@@ -138,7 +142,7 @@ function displayNotFound(message) {
     page.appendChild(divMessage);
     divMessage.appendChild(pMessage);
 }
-
+// =====================================================================
 function hideAllStudents() {
     for (let i = 0; i < studentItems.length; i++) {
         studentItems[i].style.display = 'none';
